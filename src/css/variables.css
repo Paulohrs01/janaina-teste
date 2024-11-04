@@ -1,0 +1,67 @@
+:root{
+    --text-color-branco: #E6E6E6;
+    --color-dourado: #FCE4A6;
+    --color-btn-1: rgba(252, 228, 166, 0.5);
+    --color-preto: #242424;
+}
+
+@font-face {
+    font-family: 'Clash';
+    src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'), 
+         url('../fonts/ClashDisplay-Variable.woff') format('woff'); 
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+.titulo {
+    color: var(--text-color-branco);
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Clash", sans-serif;
+}
+
+.subtitulo { 
+    color: var(--text-color-branco);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.text-dourado{
+    color: var(--color-dourado);
+}
+
+.btn-1 {
+    width: 130px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border: 1px solid var(--color-btn-1);
+    border-radius: 29px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-1:hover {
+    font-weight: 500;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px #fce4a634;
+}
+
+.hover-img {
+transition: transform 0.4s ease;
+}
+
+.hover-img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.07);
+    }
+
+
+

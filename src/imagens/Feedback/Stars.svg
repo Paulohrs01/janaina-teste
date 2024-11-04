@@ -1,0 +1,20 @@
+<svg width="66" height="15" viewBox="0 0 66 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <path id="star" d="M7.96508 1L9.21418 4.74433H13.2564L9.98617 7.05846L11.2353 10.8028L7.96508 8.48866L4.69488 10.8028L5.94399 7.05846L2.67379 4.74433H6.71597L7.96508 1Z" fill="#FFD362"/>
+                            <filter id="shadow" x="-2" y="-2" width="20" height="20" color-interpolation-filters="sRGB">
+                                <feOffset dy="2" />
+                                <feGaussianBlur stdDeviation="1.05" />
+                                <feComposite in2="SourceAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                            </filter>
+                        </defs>
+                        <g filter="url(#shadow)">
+                            <use href="#star" x="0"/>
+                            <use href="#star" x="13"/>
+                            <use href="#star" x="26"/>
+                            <use href="#star" x="39"/>
+                            <use href="#star" x="52"/>
+                        </g>
+                    </svg>
