@@ -687,9 +687,15 @@ footer {
   text-align: center;
 }
 
-footer p {
-  margin: 146px 0 36px;
-  width: 200px;
+footer p{
+  margin: 80px 0 20px;
+  width: 330px;
+  font-weight: 100;
+}
+
+footer .paulodosite {
+  margin: 20px 0 16px;
+  width: 330px;
   font-weight: 100;
 }
 
