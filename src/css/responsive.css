@@ -1,10 +1,24 @@
-@media screen and (min-width: 450px) and (max-width: 1024px) {
+@media screen and (min-width: 450px) {
+
+  .header {
+    padding: 0 20px;
+  }
+
+  .home .container .home-desc .titulo,
+  .home .container .home-desc p,
+  .tratamentos .marmore .text-card h4,
+  .tratamentos .marmore .text-card p {
+    text-align: left;
+  }
+
   .banner {
-    background-image: url('../imagens/banner/Janaina-banner-dourado-TABLET-v1.jpg');
+    background-image: url('../imagens/banner/Janaina-banner-dourado-MOBILE-TABLET.webp');
+    height: 1000px;
+    top: -12%;
   }
 
   .home {
-    height: 560px;
+    height: 750px;
   }
 
   .home .container .home-desc {
@@ -27,31 +41,29 @@
   }
 
   .tratamentos .marmore {
-    background-image: url(../imagens/marmore-parana-desktop.jpg);
+    background-image: url(../imagens/marmore-parana-tablet.webp);
     height: 282px;
     margin-top: 30px;
   }
 
   .tratamentos .marmore .text-card {
-    width: 632px;
+    width: 652px;
     height: 219px;
+    align-items: flex-start;
+    padding: 30px 35px;
   }
 
   .tratamentos .marmore .text-card h4 {
     margin: 32px 0px 21px 0;
     font-size: 24px;
-    text-align: left;
-    width: 450px;
+    width: 400px;
   }
 
   .tratamentos .marmore .text-card p {
     font-size: 17px;
-    text-align: left;
-    width: 450px;
   }
 
   .tratamentos .trata-desc {
-    width: 730px;
     height: 364px;
   }
 
@@ -67,7 +79,7 @@
   }
 
   .tratamentos .card {
-    height: 800px;
+    height: 700px;
   }
 
   .tratamentos .card .acne-desc {
@@ -83,17 +95,12 @@
     font-size: 19px;
   }
 
-  .tratamentos .card .div-arrow {
-    margin-top: 52px;
-  }
-
   .tratamentos .card .div-arrow p {
     font-weight: 100;
     font-size: 16px;
   }
 
   .swiper {
-    width: 100%;
     margin-top: 90px;
   }
 
@@ -148,7 +155,7 @@
 
   .online {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     padding: 20px;
   }
@@ -158,14 +165,11 @@
     text-align: left;
     align-items: flex-start;
     width: 427px;
-    margin-right: 20px;
+    margin-left: 20px;
   }
 
   .online img {
-    width: 185px;
-    height: 370px;
     margin-top: 15px;
-    margin-left: 20px;
   }
 
   .online h1 {
@@ -198,14 +202,14 @@
   }
 
   .afeccoes .search {
-    width: 526px;
+    width: 450px;
     height: 56px;
     margin: 38px 0 16px;
   }
 
   .afeccoes .search svg {
     margin-top: 9px;
-    margin-left: 5px;
+    margin-left: 10px;
   }
 
   .afeccoes .search h3 {
@@ -214,8 +218,8 @@
 
   .afeccoes .card-search {
     width: 576px;
-    height: 127px;
-    font-size: 16px;
+    height: 110px;
+    font-size: 14px;
     padding: 26px;
   }
 
@@ -243,7 +247,7 @@
 
   .afeccoes .trata-desc {
     max-width: 600px;
-    ;
+
   }
 
   .afeccoes .trata-desc h4 {
@@ -251,86 +255,53 @@
   }
 
   .mentoria {
-    height: 600px;
+    height: 850px;
   }
 
-  .mentoria .container {
-    flex-direction: row-reverse;
-    justify-content: center;
-    max-width: 720px;
+  .mentoria .text-mac {
+    font-size: 16px;
+    max-width: 160px;
+    margin: 17px 150px 0 0;
   }
 
   .mentoria .container img {
-    content: url('../imagens/macbook-tablet-web.webp');
-    position: absolute;
-    top: -40px;
-    width: 420px;
-    height: 270px;
-    padding: 0 12px;
+    width: 450px;
+    height: 280px;
   }
 
   .mentoria .btn-1 {
-    z-index: 1;
-    margin: 78px 218px 0 0;
-    font-size: 8px;
-    width: 80px;
-    height: 20px;
+    margin: 58px 219px 0 0;
+    font-size: 10px;
+    width: 100px;
+    height: 25px;
   }
 
   .mentoria .ment-desc {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding-left: 20px;
-    margin-right: 90px;
+    margin-top: 90px;
+    max-width: 500px;
   }
 
   .mentoria .ment-desc h1 {
-    font-size: 28px;
-    margin: 5px;
+    font-size: 32px;
+    margin-top: 5px;
   }
 
   .mentoria .ment-desc p {
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    margin-top: 8px;
+    font-size: 17px;
   }
 
   .mentoria .ment-desc-2 {
     max-width: 500px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     margin: 100px auto 140px;
   }
 
   .mentoria .ment-desc-2 .titulo {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .mentoria .ment-desc-2 .subtitulo {
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 12px;
-  }
-
-  .mentoria .ment-desc-2 .btn-ment {
-    width: 197px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    margin-top: 18px;
-    transition: transform 0.3s ease;
-  }
-
-  .mentoria .btn-ment:hover {
-    background-color: var(--color-dourado);
-    color: var(--color-preto);
-    font-weight: 600;
-    transform: scale(1.05);
   }
 
   .sobre {
@@ -367,7 +338,7 @@
     width: 210px;
     height: 316px;
   }
-  
+
   .contato .btns-conta .btn-1 {
     width: 150px;
     height: 42px;
@@ -388,27 +359,39 @@
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
+  
+  .header {
+    height: 90px;
+    backdrop-filter: blur(4px);
+    font-size: 14px;
+    padding: 0 50px;
+    top: -10px;
+  }
 
   .header nav {
     padding-right: 20px;
   }
 
   .banner {
-    background-image: url('../imagens/banner/banner-dourado-v14-png-v2.webp');
+    background-image: url('../imagens/banner/banner-dourado-desktop.webp');
+    height: 100%;
+    top: 0%;
   }
 
   .home {
-    height: 600px;
+    height: 610px;
     display: flex;
+    justify-content: center;
   }
 
   .home .container {
-    margin-right: 100px;
+    margin-right: 30px;
   }
 
   .home .container .home-desc {
     width: 650px;
+    margin-right: 300px;
   }
 
   .home .container .home-desc .titulo {
@@ -429,55 +412,48 @@
   }
 
   .tratamentos .marmore {
-    background-image: url(../imagens/marmore-parana-desktop.jpg);
+    background-image: url(../imagens/marmore-parana-desktop.webp);
     height: 356px;
-    margin-top: 10px
+    margin-top: 10px;
   }
 
   .tratamentos .marmore .text-card {
-    width: 900px;
-    height: 260px;
+    width: 800px;
+    height: 280px;
     align-items: start;
-    padding-left: 60px;
+    padding: 0 35px 40px;
   }
 
   .tratamentos .marmore .text-card h4 {
     margin: 32px 0px 21px 0;
-    font-size: 32px;
-    text-align: left;
+    font-size: 28px;
     width: 540px;
   }
 
   .tratamentos .marmore .text-card p {
-    font-size: 22px;
-    text-align: left;
-    width: 770px;
+    font-size: 19px;
     margin-bottom: 0px;
-  }
-
-  .tratamentos .trata-desc {
-    height: 416px;
+    width: 690px;
   }
 
   .tratamentos .trata-desc h4 {
-    font-size: 28px;
-    margin: 74px 0 9px;
-    width: 610px;
+    font-size: 32px;
+    width: 740px;
   }
 
   .tratamentos .trata-desc p {
-    font-size: 25px;
+    font-size: 22px;
     width: 900px;
   }
 
   .tratamentos .card {
-    width: 1200px;
-    height: 650px;
+    height: 700px;
     border-radius: 30px;
   }
 
   .tratamentos .card .acne-desc {
     width: 60%;
+    margin-top: 40px;
   }
 
   .tratamentos .card .acne-desc h3 {
@@ -486,13 +462,17 @@
   }
 
   .tratamentos .card p {
-    font-size: 24px;
-  }
+    font-size: 22px;
+   }
+
+  .tratamentos .card .div-arrow {
+    margin-top: 24px;
+}
 
   .tratamentos .card .div-arrow p {
     font-weight: 100;
     font-size: 16px;
-    padding-right: 6px;
+    padding-right: 10px;
   }
 
   .tratamentos .card .div-arrow svg {
@@ -506,8 +486,6 @@
   }
 
   .tratamentos .trata-cards {
-    display: flex;
-    flex-direction: row;
     gap: 80px;
   }
 
@@ -525,7 +503,6 @@
   .feedback {
     height: 500px;
     margin-top: 200px;
-
   }
 
   .feedback .titulos {
@@ -535,12 +512,12 @@
   }
 
   .feedback .titulos h1 {
-    font-size: 48px;
+    font-size: 60px;
   }
 
   .feedback .titulos h4 {
-    font-size: 32px;
-    width: 830px;
+    font-size: 26px;
+    width: 700px;
   }
 
   .feedback .btns-feed {
@@ -552,13 +529,8 @@
     height: 38px;
   }
 
-  .online {
-    flex-direction: row-reverse;
-  }
-
   .online .desc-online {
-    text-align: left;
-    align-items: flex-start;
+    width: 595px;
   }
 
   .online h1 {
@@ -577,14 +549,10 @@
   }
 
   .online img {
-    width: 211px;
-    height: 403px;
-    margin-right: 62px;
-    margin-top: 10px;
+    content: url(../imagens/iphone-online-desktop.webp);
   }
 
   .online .btn-1 {
-    margin: 26px 0 32px;
     width: 238px;
     height: 42px;
     font-size: 15px;
@@ -595,10 +563,10 @@
   }
 
   .afeccoes .search {
-    width: 800px;
+    width: 630px;
     height: 84px;
-    margin: 38px 0 16px;
     justify-content: space-around;
+    padding: 13px;
   }
 
   .afeccoes .search svg {
@@ -607,14 +575,14 @@
   }
 
   .afeccoes .search h3 {
-    font-size: 36px;
-    margin-left: 30px;
+    font-size: 26px;
+    margin-left: 12px;
   }
 
   .afeccoes .card-search {
-    width: 950px;
+    width: 930px;
     height: 155px;
-    font-size: 23px;
+    font-size: 18px;
     padding: 40px;
   }
 
@@ -625,7 +593,7 @@
   .afeccoes .card {
     width: 270px;
     height: 144px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .afeccoes .cards {
@@ -641,25 +609,28 @@
 
   .afeccoes .trata-desc {
     max-width: 800px;
-    ;
   }
 
   .afeccoes .trata-desc h4 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 30px;
   }
 
   .afeccoes .trata-desc p {
     margin-bottom: 16px;
-    font-size: 27px;
+    font-size: 24px;
     font-weight: 300;
   }
 
   .afeccoes .btn-1 {
-    width: 303px;
-    height: 48px;
+    width: 280px;
+    height: 46px;
     margin-bottom: 128px;
     font-size: 20px;
+  }
+
+  .mentoria {
+    height: 700px;
   }
 
   .mentoria .container {
@@ -669,31 +640,33 @@
   }
 
   .mentoria .container img {
-    content: url('../imagens/macbook-tablet-web.webp');
-    position: absolute;
-    top: -40px;
-    width: 420px;
-    height: 270px;
-    padding: 0 12px;
+    content: url('../imagens/macbook-desktop.webp');
+    width: 580px;
+    height: 390px;
+  }
+
+  .mentoria .text-mac {
+    font-size: 16px;
+    max-width: 190px;
+    margin: 20px 200px 0 0;
   }
 
   .mentoria .btn-1 {
     z-index: 1;
-    margin: 78px 218px 0 0;
-    font-size: 8px;
-    width: 80px;
-    height: 20px;
+    margin: 90px 270px 0 0;
+    font-size: 12px;
+    width: 120px;
   }
 
   .mentoria .ment-desc {
     text-align: left;
     margin-right: 90px;
+    margin-top: 10px;
     max-width: 500px;
   }
 
   .mentoria .ment-desc h1 {
     font-size: 40px;
-    margin: 8px;
   }
 
   .mentoria .ment-desc p {
@@ -703,7 +676,6 @@
 
   .mentoria .ment-desc-2 {
     max-width: 600px;
-    margin: 100px auto 140px;
   }
 
   .mentoria .ment-desc-2 .titulo {
@@ -725,25 +697,20 @@
     height: 768px;
   }
 
-  .sobre .container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .sobre .container .desc-sobre {
     width: 483px;
-    text-align: left;
-    margin-right: 80px;
+  }
+
+  .sobre h1:first-of-type {
+    margin-top: 0px;
   }
 
   .sobre h1 {
-    font-size: 46px;
+    font-size: 44px;
   }
 
   .sobre p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .sobre img {
@@ -756,24 +723,36 @@
     flex-direction: row;
     gap: 0px;
   }
-  
+
   .contato .btns-conta .btn-1 {
-    width: 221px;
-    height: 62px;
-    font-size: 20px;
+    width: 190px;
+    font-size: 18px;
     margin: 20px;
-    margin-bottom: 28px;
-    gap: 20px;
   }
 
   .contato .btns-conta .btn-1 svg {
-    width: 26px;
+    width: 24px;
   }
 
   .contato p {
-    width: 260px;
-    margin-top: 28px;
+    font-size: 20px;
   }
 
+}
 
+@media screen and (min-width: 1270px) {
+  .home .container {
+    margin-right: 200px;
+  }
+
+  .home .home-desc {
+    margin-right: 300px;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  .tratamentos .card {
+    width: 1400px;
+  }
 }

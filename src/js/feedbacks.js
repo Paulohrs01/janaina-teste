@@ -1,25 +1,36 @@
 // Array de depoimentos
 const testimonials = [
+    {
+        image: './src/imagens/Feedback/Perfil-1-Paulo-Henrique.png',
+        name: 'Paulo Henrique',
+        testimonial: 'fiz limpeza de pele com outra pessoa e eu tinha acnes infeccionadas, ela até fez peeling. 3 dias depois, meu rosto estava cheio de infecções. Vc me explicou q isso era errado e, em 2 meses de tratamento, praticamente n tinha mais nenhuma acne infeccionada.',
+    },
   {
-      image: './src/imagens/Feedback/perfil1.png',
-      name: 'Paulo Henrique',
-      testimonial: 'Finalmente consegui resolver meu problema com acne. Já havia consultado outros profissionais, mas foi com você que consegui uma solução definitiva. Obrigado, Jana!',
+      image: './src/imagens/Feedback/Perfil-2-Floriana-Teixeira.png',
+      name: 'Floriana Teixeira',
+      testimonial: 'Você salvou a  minha vida. Minha chiquetosa, você Janaína tem o poder de transformar a vida das pessoas. Seu trabalho é incrível.',
   },
   {
-      image: './src/imagens/Feedback/perfil2.png',
-      name: 'Nome do Depoente 2',
-      testimonial: 'Gostei bastante de mim, *testando esse depoimento aqui',
+      image: './src/imagens/Feedback/Perfil-3-Alana-Soares.png',
+      name: 'Alana Soares',
+      testimonial: 'tô tão feliz Jana! só tenho agradecer 💖💖 isso estava  me afetando muito, eu não saía sem maquiagem, hoje me sinto levreee ✨✨✨',
   },
   {
-      image: './src/imagens/Feedback/perfil1.png',
-      name: 'Nome do Depoente 3',
-      testimonial: 'Depoimento do usuário 3.',
+      image: './src/imagens/Feedback/Perfil-4-Mariana.png',
+      name: 'Mariana da Silva',
+      testimonial: 'Fizemos apenas UMA CONSULTA ONLINE, você explicou detalhadamente tudo! Super atenciosa. A minha filhinha estava sofrendo muito, amiguinhos zombavam dela. HOJE a Pele dela é OUTRA! Só GRATIDÃO Jana O seu trabalho é incrível',
   },
   {
-      image: './src/imagens/Feedback/perfil1.png',
-      name: 'Nome do Depoente 4',
-      testimonial: 'Depoimento do usuário 4. lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, nulla autem porro aperiam provident excepturi',
+      image: './src/imagens/Feedback/Perfil-5-Amanda-Medeiros.png',
+      name: 'Amanda Medeiros',
+      testimonial: 'Muito obrigada Jana. Gratidão por todo carinho e cuidado! Nem nos meus sonhos imaginei estar com a pele tão linda e bem cuidada, não sei o que seria de mim sem o seu acompanhamento. Gratidão! 💜',
   },
+
+  {
+    image: './src/imagens/Feedback/Perfil-6-sem-nome.png',
+    name: 'Ana Boazal',
+    testimonial: 'E eu que recebi uma mensagem, a pessoa perguntando se o meu resultado foi realmente bom? Certeza que a pessoa achou que a sua foto tinha Photoshop hahaha contei toda a verdade pra ela, é real esse depois simm ',
+},
   // Adicione mais objetos conforme necessário
 ];
 
@@ -86,6 +97,36 @@ function renderCards() {
       `;
   }
 }
+let startX = 0; // Posição inicial do toque
+let endX = 0;   // Posição final do toque
+
+// Detecta o início do toque
+container.addEventListener('touchstart', (event) => {
+  startX = event.touches[0].clientX; // Armazena a posição inicial do toque
+});
+
+// Detecta o movimento do toque
+container.addEventListener('touchmove', (event) => {
+  endX = event.touches[0].clientX; // Atualiza a posição final enquanto o dedo se move
+});
+
+// Detecta o fim do toque
+container.addEventListener('touchend', () => {
+  const deltaX = endX - startX; // Calcula a diferença entre o início e o fim do toque
+
+  if (Math.abs(deltaX) > 50) { // Define um limite mínimo para considerar o swipe
+    if (deltaX > 0) {
+      mudarSlideFeedback(-1); // Swipe para a direita
+    } else {
+      mudarSlideFeedback(1);  // Swipe para a esquerda
+    }
+  }
+
+  // Reseta as variáveis
+  startX = 0;
+  endX = 0;
+});
+
 
 // Muda o índice e atualiza os cards
 function mudarSlideFeedback(direction) {
