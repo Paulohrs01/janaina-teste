@@ -1,44 +1,41 @@
 // Array de depoimentos
 const testimonials = [
     {
-        image: './src/imagens/Feedback/Perfil-1-Paulo-Henrique.png',
+        image: './src/imagens/Feedback/Perfil-1-Paulo-Henrique.webp',
         name: 'Paulo Henrique',
         testimonial: 'fiz limpeza de pele com outra pessoa e eu tinha acnes infeccionadas, ela até fez peeling. 3 dias depois, meu rosto estava cheio de infecções. Vc me explicou q isso era errado e, em 2 meses de tratamento, praticamente n tinha mais nenhuma acne infeccionada.',
     },
   {
-      image: './src/imagens/Feedback/Perfil-2-Floriana-Teixeira.png',
+      image: './src/imagens/Feedback/Perfil-2-Floriana-Teixeira.webp',
       name: 'Floriana Teixeira',
       testimonial: 'Você salvou a  minha vida. Minha chiquetosa, você Janaína tem o poder de transformar a vida das pessoas. Seu trabalho é incrível.',
   },
   {
-      image: './src/imagens/Feedback/Perfil-3-Alana-Soares.png',
+      image: './src/imagens/Feedback/Perfil-3-Alana-Soares.webp',
       name: 'Alana Soares',
       testimonial: 'tô tão feliz Jana! só tenho agradecer 💖💖 isso estava  me afetando muito, eu não saía sem maquiagem, hoje me sinto levreee ✨✨✨',
   },
   {
-      image: './src/imagens/Feedback/Perfil-4-Mariana.png',
+      image: './src/imagens/Feedback/Perfil-4-Mariana.webp',
       name: 'Mariana da Silva',
       testimonial: 'Fizemos apenas UMA CONSULTA ONLINE, você explicou detalhadamente tudo! Super atenciosa. A minha filhinha estava sofrendo muito, amiguinhos zombavam dela. HOJE a Pele dela é OUTRA! Só GRATIDÃO Jana O seu trabalho é incrível',
   },
   {
-      image: './src/imagens/Feedback/Perfil-5-Amanda-Medeiros.png',
+      image: './src/imagens/Feedback/Perfil-5-Amanda-Medeiros.webp',
       name: 'Amanda Medeiros',
       testimonial: 'Muito obrigada Jana. Gratidão por todo carinho e cuidado! Nem nos meus sonhos imaginei estar com a pele tão linda e bem cuidada, não sei o que seria de mim sem o seu acompanhamento. Gratidão! 💜',
   },
 
   {
-    image: './src/imagens/Feedback/Perfil-6-sem-nome.png',
+    image: './src/imagens/Feedback/Perfil-6-sem-nome.webp',
     name: 'Ana Boazal',
     testimonial: 'E eu que recebi uma mensagem, a pessoa perguntando se o meu resultado foi realmente bom? Certeza que a pessoa achou que a sua foto tinha Photoshop hahaha contei toda a verdade pra ela, é real esse depois simm ',
 },
-  // Adicione mais objetos conforme necessário
 ];
 
-// Índice inicial
 let currentIndex = 0;
 const container = document.getElementById('testimonialContainer');
 
-// Função para gerar o SVG das estrelas
 function renderStarSVG() {
   return `
       <svg width="66" height="15" viewBox="0 0 66 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,18 +61,16 @@ function renderStarSVG() {
   `;
 }
 
-// Determina o número de cards a serem exibidos com base na largura da tela
 function getCardsPerView() {
   const width = window.innerWidth;
-  if (width >= 1024) return 3; // Desktop
-  if (width >= 768) return 2;   // Tablet
-  return 1;                     // Mobile
+  if (width >= 1024) return 3; 
+  if (width >= 768) return 2;   
+  return 1;                     
 }
 
-// Renderiza os cards de acordo com a tela
 function renderCards() {
   const cardsPerView = getCardsPerView();
-  container.innerHTML = ''; // Limpa o container antes de renderizar novos cards
+  container.innerHTML = '';
 
   for (let i = 0; i < cardsPerView; i++) {
       const index = (currentIndex + i) % testimonials.length;
@@ -97,45 +92,39 @@ function renderCards() {
       `;
   }
 }
-let startX = 0; // Posição inicial do toque
-let endX = 0;   // Posição final do toque
+let startX = 0;
+let endX = 0;   
 
-// Detecta o início do toque
+
 container.addEventListener('touchstart', (event) => {
-  startX = event.touches[0].clientX; // Armazena a posição inicial do toque
+  startX = event.touches[0].clientX;
 });
 
-// Detecta o movimento do toque
+
 container.addEventListener('touchmove', (event) => {
-  endX = event.touches[0].clientX; // Atualiza a posição final enquanto o dedo se move
+  endX = event.touches[0].clientX;
 });
 
-// Detecta o fim do toque
-container.addEventListener('touchend', () => {
-  const deltaX = endX - startX; // Calcula a diferença entre o início e o fim do toque
 
-  if (Math.abs(deltaX) > 50) { // Define um limite mínimo para considerar o swipe
+container.addEventListener('touchend', () => {
+  const deltaX = endX - startX; 
+
+  if (Math.abs(deltaX) > 50) { 
     if (deltaX > 0) {
-      mudarSlideFeedback(-1); // Swipe para a direita
+      mudarSlideFeedback(-1); 
     } else {
-      mudarSlideFeedback(1);  // Swipe para a esquerda
+      mudarSlideFeedback(1); 
     }
   }
-
-  // Reseta as variáveis
   startX = 0;
   endX = 0;
 });
 
-
-// Muda o índice e atualiza os cards
 function mudarSlideFeedback(direction) {
   currentIndex = (currentIndex + direction + testimonials.length) % testimonials.length;
   renderCards();
 }
 
-// Atualiza os cards ao redimensionar a tela
 window.addEventListener('resize', renderCards);
 
-// Inicializa a renderização dos cards
 renderCards();
